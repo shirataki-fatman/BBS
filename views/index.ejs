@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form method="POST" action="reg">
+    	<p>名前：<input type="text" name="name"></p>
+    	<p><textarea name="message" rows="10"  cols="40"></textarea></p>
+    	<p><input type="submit" value="送信">
+    </form>
+    <% for(var i=0; i<data.length; i++){ %>
+    	<hr>
+	<p>
+	名前：<%= data[i].name %><br>
+	<%= data[i].message %>
+	</p>
+    <% } %>
+  </body>
+</html>
